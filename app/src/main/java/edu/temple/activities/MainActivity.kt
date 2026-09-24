@@ -1,5 +1,6 @@
 package edu.temple.activities
 
+import android.R.attr.textSize
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,13 +27,13 @@ class MainActivity : AppCompatActivity() {
         with (findViewById<RecyclerView>(R.id.textSizeSelectorRecyclerView)) {
 
             // TODO Step 2: Implement lambda body to launch new activity and pass value
-            adapter = TextSizeAdapter(textSizes){
+            adapter = TextSizeAdapter(textSizes){ chosenTextSize ->
                 //val launchIntent = Intent(this@MainActivity, DisplayActivity::class.java)
                 startActivity(
                     Intent(this@MainActivity,
                         DisplayActivity::class.java
                     ).apply{
-                    putExtra(SIZE_KEY, textSizes)
+                    putExtra(SIZE_KEY, chosenTextSize)
                 }
                 //Added launchIntent & startActivity.
                 //The idea is that each activity has a single job & it does that job only.
