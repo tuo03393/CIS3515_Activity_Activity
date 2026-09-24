@@ -1,6 +1,5 @@
 package edu.temple.activities
 
-import android.R.attr.textSize
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
